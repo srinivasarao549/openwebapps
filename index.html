@@ -160,8 +160,13 @@
             application needs in order to run correctly. A full list of valid values is TBD.
           </li>
           <li><dfn>orientation</dfn>:
-            This value defined the orientation at which the application will initially start.
-            Can be either "portrait" or "landscape".
+            This value defines the orientation at which the application will initially start.
+            Can be one of "portrait", "landscape", "portrait-secondary" or "landscape-secondary".
+            The options suffixed with "-secondary" imply a 180 degree rotation from the options
+            without the suffix, for instance, holding the phone upside down (but
+            still in a manner where width &lt; height), implies the "portrait-secondary" 
+            orientation. If this field had a valid value, the runtime will not change the orientation
+            of the view rendering the application even if the device is turned.
           </li>
           <li><dfn>fullscreen</dfn>:
             This value is set to "true" or "false" to describe whether the runtime should
